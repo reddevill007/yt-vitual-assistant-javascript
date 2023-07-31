@@ -1,5 +1,17 @@
 const btn = document.querySelector('.talk');
+
+
 const content = document.querySelector('.content');
+
+
+function clickButton() {
+    var button = document.getElementById('myButton');
+    button.click(); // Simulate a button click
+
+  }
+
+  // Set interval to call clickButton function every 5 seconds (5000 milliseconds)
+  setInterval(clickButton, 5000)
 
 function speak(sentence) {
     const text_speak = new SpeechSynthesisUtterance(sentence);
@@ -33,8 +45,9 @@ function wishMe() {
 
 window.addEventListener('load', ()=>{
     speak("Activating Inertia");
-    speak("Going online");
-    wishMe();
+    // speak("Going online");
+    
+    // wishMe();
 })
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -67,7 +80,7 @@ function speakThis(message) {
     }
 
     else if(message.includes('name')) {
-        const finalText = "My name is Inertia";
+        const finalText = "My name is Jarvis";
         speech.text = finalText;
     }
 
